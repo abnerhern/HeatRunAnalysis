@@ -1,0 +1,12 @@
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\HeatRunAnalysis.csprojResolveAssemblyReference.cache
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\abner\Documents\Visual Studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysis\ConsoleApplication1\obj\Debug\HeatRunAnalysis.csprojResolveAssemblyReference.cache
