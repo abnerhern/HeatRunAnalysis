@@ -134,7 +134,7 @@ namespace HeatRunAnalysisTool
                 {
                     topOilTemp2[i] = (ultimateTopOil[i] * (1 - Math.Exp(-1 / tauTO[i])))
                                                + (topOilTemp[topOilTemp.Length - 1] * Math.Exp(-1 / tauTO[i]));
-                    //topOilTemp2[i] = topOilTemp[topOilTemp2.Length - 1];
+                    topOilTemp2[i] = topOilTemp[topOilTemp2.Length - 1];
                     continue;
                 }
 
