@@ -25,11 +25,13 @@ namespace HeatRunAnalysisTool
 
         // Loading Limits
         private NormalLoadingLimit nll;
-        private PlannedLoadingLimit pll;
-        private LongTermLoadingLimit ltll;
-        private ShortTermLoadingLimit stll;
+       // private PlannedLoadingLimit pll;
+        //private LongTermLoadingLimit ltll;
+        //private ShortTermLoadingLimit stll;
 
-        private LoadingLimit testll;
+        private LoadingLimit pll;
+        private LoadingLimit ltll;
+        private LoadingLimit stll;
         
         // Loss of life 
         private LossOfLife lossNll;
@@ -97,7 +99,7 @@ namespace HeatRunAnalysisTool
             // Makes a temp
 
             try
-            {
+            { 
                 if (!this.isUploaded)
                 {
                     throw new System.ArgumentException("No load profile uploaded", "original"); 
@@ -131,7 +133,7 @@ namespace HeatRunAnalysisTool
             {
                 MessageBox.Show("Unable to run analysis. Make sure the values are correct and load profile uploaded.", "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
+            }  
         }
 
         private void setXfrmr()
@@ -160,11 +162,11 @@ namespace HeatRunAnalysisTool
         private void setLoadingLimits() 
         {
             this.nll = new NormalLoadingLimit(this.loadMult.getNormalLoadProfile(), this.xfrmr);
-            this.pll = new PlannedLoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr);
-            this.ltll = new LongTermLoadingLimit(this.loadMult.getLTELLLoadProfile(), this.xfrmr);
-            this.stll = new ShortTermLoadingLimit(this.loadMult.getSTELLoadProfile(), this.xfrmr);
+            this.pll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
+            this.ltll = new LoadingLimit(this.loadMult.getLTELLLoadProfile(), this.xfrmr, 0, 1);
+            this.stll = new LoadingLimit(this.loadMult.getSTELLoadProfile(), this.xfrmr, 0, 1);
 
-            this.testll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
+            //this.testll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
         }
 
         private void calculateLoss()
@@ -236,7 +238,7 @@ namespace HeatRunAnalysisTool
 
 
 
-            //============================= stell Chart ====================================
+            //============================= Stell Chart ====================================
             chart4.ChartAreas[0].AxisY.ScaleView.Zoom(0, 140);
             chart4.ChartAreas[0].AxisX.ScaleView.Zoom(0, stll.getHottestSpotTemp().Length + 1);
             chart4.ChartAreas[0].CursorX.IsUserEnabled = true;
@@ -307,19 +309,57 @@ namespace HeatRunAnalysisTool
 
             // Data Grid View : 
 
-            for (int i = 0; i < nll.getHottestSpotTemp().Length; i++)
+            for (int i = 0; i < pll.getHottestSpotTemp().Length; i++)
             {
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[i].Cells[0].Value = i + 1; // Hour
                 dataGridView2.Rows[i].Cells[1].Value = loadMult.getPLLLoadProfile()[i]; // Load
                 dataGridView2.Rows[i].Cells[2].Value = 30; // Ambient Temp
-                dataGridView2.Rows[i].Cells[3].Value = testll.getTopOilTemp()[i]; // Top Oil Temp
-                dataGridView2.Rows[i].Cells[4].Value = testll.getHotSpotTemp()[i]; // Hot Spot Temp
-                dataGridView2.Rows[i].Cells[5].Value = testll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
-                dataGridView2.Rows[i].Cells[6].Value = testll.getTau()[i]; // Tau
-                dataGridView2.Rows[i].Cells[7].Value = lossNll.getFaa()[i]; // Faa
-                dataGridView2.Rows[i].Cells[8].Value = lossNll.getFaa()[i]; // Aging Hour    
-                dataGridView2.Rows[i].Cells[9].Value = lossNll.getCumAging()[i]; // Cummulative Aging  
+                dataGridView2.Rows[i].Cells[3].Value = pll.getTopOilTemp()[i]; // Top Oil Temp
+                dataGridView2.Rows[i].Cells[4].Value = pll.getHotSpotTemp()[i]; // Hot Spot Temp
+                dataGridView2.Rows[i].Cells[5].Value = pll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
+                dataGridView2.Rows[i].Cells[6].Value = pll.getTau()[i]; // Tau
+                dataGridView2.Rows[i].Cells[7].Value = lossPll.getFaa()[i]; // Faa
+                dataGridView2.Rows[i].Cells[8].Value = lossPll.getFaa()[i]; // Aging Hour    
+                dataGridView2.Rows[i].Cells[9].Value = lossPll.getCumAging()[i]; // Cummulative Aging  
+            }
+
+            //============================= LTELL  =======================================
+
+            // Data Grid View : 
+
+            for (int i = 0; i < ltll.getHottestSpotTemp().Length; i++)
+            {
+                dataGridView5.Rows.Add();
+                dataGridView5.Rows[i].Cells[0].Value = i + 1; // Hour
+                dataGridView5.Rows[i].Cells[1].Value = loadMult.getLTELLLoadProfile()[i]; // Load
+                dataGridView5.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView5.Rows[i].Cells[3].Value = ltll.getTopOilTemp()[i]; // Top Oil Temp
+                dataGridView5.Rows[i].Cells[4].Value = ltll.getHotSpotTemp()[i]; // Hot Spot Temp
+                dataGridView5.Rows[i].Cells[5].Value = ltll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
+                dataGridView5.Rows[i].Cells[6].Value = ltll.getTau()[i]; // Tau
+                dataGridView5.Rows[i].Cells[7].Value = lossLtll.getFaa()[i]; // Faa
+                dataGridView5.Rows[i].Cells[8].Value = lossLtll.getFaa()[i]; // Aging Hour    
+                dataGridView5.Rows[i].Cells[9].Value = lossLtll.getCumAging()[i]; // Cummulative Aging  
+            }
+
+            //============================= STELL  =======================================
+
+            // Data Grid View : 
+
+            for (int i = 0; i < stll.getHottestSpotTemp().Length; i++)
+            {
+                dataGridView4.Rows.Add();
+                dataGridView4.Rows[i].Cells[0].Value = i + 1; // Hour
+                dataGridView4.Rows[i].Cells[1].Value = loadMult.getLTELLLoadProfile()[i]; // Load
+                dataGridView4.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView4.Rows[i].Cells[3].Value = stll.getTopOilTemp()[i]; // Top Oil Temp
+                dataGridView4.Rows[i].Cells[4].Value = stll.getHotSpotTemp()[i]; // Hot Spot Temp
+                dataGridView4.Rows[i].Cells[5].Value = stll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
+                dataGridView4.Rows[i].Cells[6].Value = stll.getTau()[i]; // Tau
+                dataGridView4.Rows[i].Cells[7].Value = lossStll.getFaa()[i]; // Faa
+                dataGridView4.Rows[i].Cells[8].Value = lossStll.getFaa()[i]; // Aging Hour    
+                dataGridView4.Rows[i].Cells[9].Value = lossStll.getCumAging()[i]; // Cummulative Aging  
             }
 
 

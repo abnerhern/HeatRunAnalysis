@@ -8,20 +8,32 @@ namespace HeatRunAnalysisTool
 {
     class LossOfLife
     {
-        double[] Load_PU = new double[24];
-        double[] Hot_spot_temp = new double[24];
-        double[] Faa = new double[24];
-        double[] Aging_hour = new double[24];
-        double[] Cum_Aging_hour = new double[24];
+        // Loss of life important arrays
+        double[] Load_PU;
+        double[] Hot_spot_temp;
+
+        // Loss of life
+        double[] Faa;
+        double[] Aging_hour;
+        double[] Cum_Aging_hour;
+
         double Loss_Of_Life;
 
+        // Constructors
         public LossOfLife(){}
 
-
+        // Contructor
         public LossOfLife(double[] Load_PU, double[] Hot_spot_temp)
         {
+            // Load Per Unit
             this.Load_PU = Load_PU;
             this.Hot_spot_temp = Hot_spot_temp;
+
+            // Instantiate Arrays
+            this.Faa = new double[Load_PU.Length];
+            this.Aging_hour = new double[Load_PU.Length];
+            this.Cum_Aging_hour = new double[Load_PU.Length];
+
             calculateFaa();
             calculateCumAgingHour();
             calculateLossOfLife();
@@ -31,10 +43,9 @@ namespace HeatRunAnalysisTool
         private void calculateFaa()
         {
 
-            for (int i = 0; i < 23; i++)
+            for (int i = 0; i < Faa.Length; i++)
             {
                 Faa[i] = Math.Exp((39.16449 - 15000 / (273 + Hot_spot_temp[i])));
-                Faa[i] = Math.Round(Faa[i], 3);
                 Aging_hour[i] = Faa[i];
             }
         
@@ -42,10 +53,15 @@ namespace HeatRunAnalysisTool
 
         private void calculateCumAgingHour()
         {
-            for (int i = 0; i < 23; i++)
+
+            for (int i = 0; i < Cum_Aging_hour.Length; i++)
             {
-                Cum_Aging_hour[i + 1] = Cum_Aging_hour[i] + Aging_hour[i + 1];
-                Cum_Aging_hour[i + 1] = Math.Round(Cum_Aging_hour[i + 1], 3);
+                if(i == 0)
+                {
+                    Cum_Aging_hour[i] = Aging_hour[i]; 
+                    continue;
+                }
+                Cum_Aging_hour[i] = Cum_Aging_hour[i - 1] + Aging_hour[i];
             }
         
         }
@@ -72,17 +88,10 @@ namespace HeatRunAnalysisTool
            return Cum_Aging_hour;
        }
 
-
-        public void printInfo() 
-        {
-            Console.WriteLine("Hour\tLoad\tHS Temp\t  Aging Accl. Factor\tAging Hour\tCummulative Aging Hour");
-            for (int i = 0; i < 24; i++)
-            {
-                Console.WriteLine((i + 1) + "\t" + Load_PU[i] + "\t" + Hot_spot_temp[i] + "\t\t" + Faa[i] + "\t\t" + Aging_hour[i] + 
-                    "\t\t" + Cum_Aging_hour[i]);
-            }
-            Console.WriteLine("Loss of life: " + Loss_Of_Life + "%");   
-        }
+       public double getLossOfLife()
+       {
+           return Loss_Of_Life;
+       }
 
 
     }
