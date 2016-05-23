@@ -20,14 +20,13 @@ namespace HeatRunAnalysisTool
 
     class NormalLoadingLimit
     {
-
         //This will store our perunit values
         private double[] perUnitValues;
 
         // This will store our load hours
         // Since we know the hours and it is going
         //to be hours 0-3, we can define it
-
+        
 
         private double kRMS;
 
@@ -38,135 +37,147 @@ namespace HeatRunAnalysisTool
         private double[] topOilTemp2;
         private double[] hottestSpotTemp;
 
-        private SubstationTransformer xfrmr; // Store transformer characteristics
-
         private double[] tauTO; // TauO
 
-        private int t; // Time interval. 1 is hour. 0.5 is hald an hour
+        private double t; // Time interval. 1 is hour. 0.5 is half an hour
+
+        private SubstationTransformer xfrmr; // Store transformer characteristics
+
+        private double threshold; //Stores the threshold value for the maximum
+
+        private double maxPerUnit; // Stores the maximim perunit value possible for this loading limit
 
 
         public NormalLoadingLimit() { }
 
-        public NormalLoadingLimit(double[] perUnitValues, SubstationTransformer xfrmr)
+        public NormalLoadingLimit(double[] perUnitValues, SubstationTransformer xfrmr, double threshold, double t)
         {
-
+            // Store the values of the array, transformer characerstics and the threshold values
             this.perUnitValues = perUnitValues;
             this.xfrmr = xfrmr;
+            this.threshold = threshold;
+            this.t = t;
+
 
             calculateKRMS();
 
-            ultimateTopOil = new double[perUnitValues.Length];
+            // Sets the array lengths for each array
+            ultimateTopOil = new double[perUnitValues.Length + 1];
             hotSpotTemp = new double[perUnitValues.Length];
-            topOilTemp = new double[perUnitValues.Length];
+            topOilTemp= new double[perUnitValues.Length];
             topOilTemp2 = new double[perUnitValues.Length];
             hottestSpotTemp = new double[perUnitValues.Length];
+            tauTO = new double[perUnitValues.Length];
 
-
-            calculateUltimateTopOil();
-
-            // Check to see if we need to calculate tauTO or if n = 1 the tauTO = tauTR
-            calculateTauTO();
-
-
-
-            calculateTopOilTemp1();
-            calculateTopOilTemp2();
-            calculateHotSpotTemp();
-            calculateHottestSpotTemp();
-
+            // Calculate Information:
+            calculateInfo();
+            calculateInfo2();
+        
         }
 
-        private void calculateUltimateTopOil()
+        //**************************************************************METHODS***************************************************************
+
+        private void calculateInfo()
         {
-            double topOilUltimate = 0;
+            // We have Krms, so we can calculate the following for the FIRST iteration
+            double TOInitial = 0;
+            double TOUlt = 0;
 
             for (int i = 0; i < topOilTemp.Length; i++)
             {
+                // If we are at the first iteration We must calculate the Tau at this iteration
                 if (i == 0)
                 {
-                    // We must calculate top oil temperature using KRMS;
-                    // Define Top Oil Ultimate
-                    topOilUltimate = (xfrmr.getdeltaThetaTO_R()) *
-                    Math.Pow(((kRMS * kRMS * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
+                    // Initial TO before iterations
+                    TOInitial = (xfrmr.getdeltaThetaTO_R()) *  Math.Pow(((kRMS * kRMS * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
+                    // Now that we have this, we can find the current iteration value
+                    TOUlt = (xfrmr.getdeltaThetaTO_R()) * Math.Pow(((perUnitValues[i] * perUnitValues[i] * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
 
-                    //Console.WriteLine("This should be 18.14 : " +topOilUltimate);
-                    ultimateTopOil[i] = topOilUltimate;
-                    continue;
-                }
-                // Calculate top Oil Ultimate first then calculate TOP oil
-                topOilUltimate = (xfrmr.getdeltaThetaTO_R()) * Math.Pow(((perUnitValues[i - 1] * perUnitValues[i - 1]
-                                  * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
+                    // Calculate Tau
+                    calculateTauTO(TOUlt, TOInitial, i);
 
-                ultimateTopOil[i] = topOilUltimate;
-            }
+                    // Use Top Oil Initial for Krms as First TO Value
+                    topOilTemp[i] = TOInitial;
 
-            for (int i = 0; i < topOilTemp.Length; i++)
-            {
-               // Console.WriteLine(ultimateTopOil[i]);
+                    // Next find HotSpot Temperature
+                    hotSpotTemp[i] = xfrmr.getdeltaThetaHS_R() * Math.Pow(perUnitValues[i], 2 * xfrmr.getM());
 
-            }
+                    // Get Hottest Spot Temperautre
+                    hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
 
-        }
-
-        private void calculateTopOilTemp1()
-        {
-
-            for (int i = 0; i < topOilTemp.Length; i++)
-            {
-                if (i == 0)
-                {
-                    topOilTemp[0] = ultimateTopOil[0];
+                    // Continue the rest of the loop
                     continue;
                 }
 
-                topOilTemp[i] = Math.Round((ultimateTopOil[i] * (1 - Math.Exp(-1 / tauTO[i])))
-                                               + (topOilTemp[i] * Math.Exp(-1 / tauTO[i])), 2);
+                // Initial TO before iterations
+                TOInitial = topOilTemp[i - 1];
+                // Now that we have this, we can find the current iteration value
+                TOUlt = (xfrmr.getdeltaThetaTO_R()) * Math.Pow(((perUnitValues[i] * perUnitValues[i] * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
 
-            }
+                // Calculate Tau
+                calculateTauTO(TOUlt, TOInitial, i);
 
-        }
+                // Use Top Oil Initial for Krms as First TO Value
+                topOilTemp[i] = (TOUlt * (1 - Math.Exp(-t / tauTO[i]))) + (TOInitial * Math.Exp(-t / tauTO[i]));
 
-        private void calculateTopOilTemp2()
-        {
-            for (int i = 0; i < topOilTemp.Length; i++)
-            {
-                if (i == 0)
-                {
-                    topOilTemp2[i] = (ultimateTopOil[i] * (1 - Math.Exp(-1 / tauTO[i])))
-                                               + (topOilTemp[topOilTemp.Length - 1] * Math.Exp(-1 / tauTO[i]));
-                    topOilTemp2[i] = topOilTemp[topOilTemp2.Length - 1];
-                    continue;
-                }
-
-                topOilTemp2[i] = (ultimateTopOil[i] * (1 - Math.Exp(-1 / tauTO[i])))
-                                               + (topOilTemp2[i - 1] * Math.Exp(-1 / tauTO[i]));
-
-            }
-
-
-
-        }
-
-        private void calculateHotSpotTemp()
-        {
-            // Calculate Hot Spot Temperature for each load
-            // Equation: DetaThetaHS = deltaThetaH,R * (K ^ 2m)
-
-            for (int i = 0; i < perUnitValues.Length; i++)
-            {
+                // Next find HotSpot Temperature
                 hotSpotTemp[i] = xfrmr.getdeltaThetaHS_R() * Math.Pow(perUnitValues[i], 2 * xfrmr.getM());
 
-            }
+                // Get Hottest Spot Temperautre
+                hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
 
+            }
+        
         }
 
-        private void calculateHottestSpotTemp()
+        private void calculateInfo2()
         {
-            for (int i = 0; i < hottestSpotTemp.Length; i++)
-            {
-                hottestSpotTemp[i] = Math.Round(topOilTemp2[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp(), 2);
-            }
+             // We have Krms, so we can calculate the following for the FIRST iteration
+            double TOInitial = 0;
+            double TOUlt = 0;
 
+            for (int i = 0; i < topOilTemp.Length; i++)
+            {
+                if(i ==0 )
+                {
+                    // Initial TO before iterations
+                    TOInitial = topOilTemp[topOilTemp.Length - 1];
+                    // Now that we have this, we can find the current iteration value
+                    TOUlt = (xfrmr.getdeltaThetaTO_R()) * Math.Pow(((perUnitValues[i] * perUnitValues[i] * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
+
+                    // Calculate Tau
+                    calculateTauTO(TOUlt, TOInitial, i);
+
+                    // Use Top Oil Initial for Krms as First TO Value
+                    topOilTemp2[i] = (TOUlt * (1 - Math.Exp(-t / tauTO[i]))) + (TOInitial * Math.Exp(-t / tauTO[i]));
+
+                    // Next find HotSpot Temperature
+                    hotSpotTemp[i] = xfrmr.getdeltaThetaHS_R() * Math.Pow(perUnitValues[i], 2 * xfrmr.getM());
+
+                    // Get Hottest Spot Temperautre
+                    hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
+
+                continue;
+                }
+
+                // Initial TO before iterations
+                TOInitial = topOilTemp[i - 1];
+                // Now that we have this, we can find the current iteration value
+                TOUlt = (xfrmr.getdeltaThetaTO_R()) * Math.Pow(((perUnitValues[i] * perUnitValues[i] * xfrmr.getR()) + 1) / (xfrmr.getR() + 1), xfrmr.getN());
+
+                // Calculate Tau
+                calculateTauTO(TOUlt, TOInitial, i);
+
+                // Use Top Oil Initial for Krms as First TO Value
+                topOilTemp[i] = (TOUlt * (1 - Math.Exp(-t / tauTO[i]))) + (TOInitial * Math.Exp(-t / tauTO[i]));
+
+                // Next find HotSpot Temperature
+                hotSpotTemp[i] = xfrmr.getdeltaThetaHS_R() * Math.Pow(perUnitValues[i], 2 * xfrmr.getM());
+
+                // Get Hottest Spot Temperautre
+                hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
+
+            }
         }
 
         private void calculateKRMS()
@@ -174,79 +185,16 @@ namespace HeatRunAnalysisTool
             double krmsstore = Math.Sqrt((Math.Pow(perUnitValues[perUnitValues.Length - 1], 2) + Math.Pow(perUnitValues[perUnitValues.Length - 2], 2) +
                                     Math.Pow(perUnitValues[perUnitValues.Length - 3], 2) + Math.Pow(perUnitValues[perUnitValues.Length - 4], 2) +
                                     Math.Pow(perUnitValues[perUnitValues.Length - 5], 2) + Math.Pow(perUnitValues[perUnitValues.Length - 6], 2)) / 6);
+
             // To change later
-            this.kRMS = krmsstore;
+            this.kRMS = Math.Round(krmsstore, 3);
         }
 
-        private void calculateTauTO()
+        // Takes Ultimate, initial and index to put the Tau value
+        private void calculateTauTO(double TOUlt ,double TOInit, int i)
         {
-            if (xfrmr.getN() == 1)
-            {
-                tauTO = new double[hotSpotTemp.Length];
-                for (int i = 0; i < tauTO.Length; i++)
-                {
-
-                    tauTO[i] = xfrmr.getTauTO_R();
-                }
-            }
-            else
-            {
-                // TODO
-                tauTO = new double[hotSpotTemp.Length];
-                for (int i = 0; i < tauTO.Length; i++)
-                {
-
-                    if (i != 0)
-                    {
-                        // Not initial
-                        if (ultimateTopOil[i] == ultimateTopOil[i - 1])
-                        {
-                            // Prev is same 
-                            tauTO[i] = xfrmr.getTauTO_R() * ((ultimateTopOil[i + 1] / xfrmr.getTauTO_R()) - (ultimateTopOil[i - 2] / xfrmr.getTauTO_R())) / (Math.Pow(ultimateTopOil[i + 1] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()) - Math.Pow(ultimateTopOil[i - 2] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()));
-                            Console.WriteLine("Initial reached " + i);
-                            Console.WriteLine("Ultimates: " + ultimateTopOil[i + 1] + " , " + ultimateTopOil[i - 2]);
-                            continue;
-                        }
-
-                        else if (i == tauTO.Length - 1)
-                        {
-                            tauTO[i] = xfrmr.getTauTO_R() * ((ultimateTopOil[0] / xfrmr.getTauTO_R()) - (ultimateTopOil[i] / xfrmr.getTauTO_R())) / (Math.Pow(ultimateTopOil[0] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()) - Math.Pow(ultimateTopOil[i] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()));
-
-                            continue;
-                        }
-
-
-
-                        tauTO[i] = xfrmr.getTauTO_R() * ((ultimateTopOil[i + 1] / xfrmr.getTauTO_R()) - (ultimateTopOil[i] / xfrmr.getTauTO_R())) / (Math.Pow(ultimateTopOil[i + 1] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()) - Math.Pow(ultimateTopOil[i] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()));
-
-
-                    }
-                    else
-                    {
-                        // Initial
-                        tauTO[i] = xfrmr.getTauTO_R() * ((ultimateTopOil[i + 1] / xfrmr.getTauTO_R()) - (ultimateTopOil[i] / xfrmr.getTauTO_R())) / (Math.Pow(ultimateTopOil[i + 1] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()) - Math.Pow(ultimateTopOil[i] / xfrmr.getTauTO_R(), 1 / xfrmr.getN()));
-                    }
-
-                }
-
-
-            }
-        }
-
-
-        public void printInfo()
-        {
-            Console.WriteLine();
-            Console.WriteLine("NORMAL (Load Cycles and Temperature Rises for " + xfrmr.getSubstationName());
-            Console.WriteLine();
-
-            for (int i = 0; i < perUnitValues.Length; i++)
-            {
-                Console.WriteLine("LOAD HOUR: " + (i + 1) + "\tLOAD PU: "
-                    + perUnitValues[i] + "\tTOP OIL TEMP: " + topOilTemp[i] + "\tTOP OIL TEMP2: " +
-                        topOilTemp2[i] + "\tHOT SPOT TEMP: " + hotSpotTemp[i] + "\t  HOTTEST SPOT TEMP: " + hottestSpotTemp[i] + "\t Tau " + tauTO[i]);
-            }
-
+            tauTO[i] = xfrmr.getTauTO_R() * ((TOUlt / xfrmr.getTauTO_R()) - (TOInit / xfrmr.getTauTO_R())) / (Math.Pow(TOUlt / xfrmr.getTauTO_R(), 1 / xfrmr.getN()) - Math.Pow(TOInit / xfrmr.getTauTO_R(), 1 / xfrmr.getN()));
+            
         }
 
 
@@ -257,16 +205,25 @@ namespace HeatRunAnalysisTool
             return this.hottestSpotTemp;
         }
 
-        public double[] getTopOilTemp() 
+        public double[] getTopOilTemp()
         {
-            return topOilTemp2;
+            return this.topOilTemp;
         }
 
-        public double[] getHotSpotTemp() 
+        public double[] getTopOilTemp2()
         {
-            return hotSpotTemp;
+            return this.topOilTemp2;
         }
 
+        public double[] getHotSpotTemp()
+        {
+            return this.hotSpotTemp;
+        }
+
+        public double[] getTau() 
+        {
+            return tauTO;
+        }
 
     }
 }

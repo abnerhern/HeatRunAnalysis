@@ -161,7 +161,7 @@ namespace HeatRunAnalysisTool
 
         private void setLoadingLimits() 
         {
-            this.nll = new NormalLoadingLimit(this.loadMult.getNormalLoadProfile(), this.xfrmr);
+            this.nll = new NormalLoadingLimit(this.loadMult.getNormalLoadProfile(), this.xfrmr, 0, 1);
             this.pll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
             this.ltll = new LoadingLimit(this.loadMult.getLTELLLoadProfile(), this.xfrmr, 0, 1);
             this.stll = new LoadingLimit(this.loadMult.getSTELLoadProfile(), this.xfrmr, 0, 1);
@@ -280,6 +280,7 @@ namespace HeatRunAnalysisTool
                   chart5.Series["STELL"].Color = Color.Red;
         
         }
+
 
         private void populateTable()
         {

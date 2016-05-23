@@ -169,6 +169,11 @@
             this.DirectedOFAFButton = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1307,6 +1312,56 @@
             this.listView1.TabIndex = 75;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(92, 928);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 25);
+            this.label14.TabIndex = 76;
+            this.label14.Text = "label14";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(92, 1000);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(82, 25);
+            this.label15.TabIndex = 77;
+            this.label15.Text = "label15";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(92, 1070);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 25);
+            this.label16.TabIndex = 78;
+            this.label16.Text = "label16";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(92, 1143);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 25);
+            this.label17.TabIndex = 79;
+            this.label17.Text = "label17";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(92, 1223);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 25);
+            this.label18.TabIndex = 80;
+            this.label18.Text = "label18";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1314,6 +1369,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(2151, 1445);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.DirectedOFAFButton);
@@ -1510,6 +1570,11 @@
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }
 
