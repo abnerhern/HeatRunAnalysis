@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,31 +61,6 @@
             this.subnameBox = new System.Windows.Forms.TextBox();
             this.ambientBox = new System.Windows.Forms.TextBox();
             this.mvaBox = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inputFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.substationTransformerParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadCyclesAndTemperatureRisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadingLimitsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.hotSpotOfLoadingLimitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lossOfLifeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutHeatRunAnalysisTool2016ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Info = new System.Windows.Forms.ToolTip(this.components);
@@ -155,13 +130,13 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tauBox = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.coilWeightBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tankWeightBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.oilVolumeBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.totalLossBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.OnanButton = new System.Windows.Forms.RadioButton();
             this.ONAFButton = new System.Windows.Forms.RadioButton();
@@ -169,16 +144,32 @@
             this.DirectedOFAFButton = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tempLimits = new System.Windows.Forms.ToolStripMenuItem();
+            this.timeIntervalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.minToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperatureZoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zone4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.setTransformerLifeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -200,6 +191,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -330,247 +326,6 @@
             this.mvaBox.Size = new System.Drawing.Size(112, 31);
             this.mvaBox.TabIndex = 42;
             this.mvaBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.menuStrip2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2154, 147);
-            this.panel1.TabIndex = 30;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(2027, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 44);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "___";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(2091, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 44);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(146)))), ((int)(((byte)(47)))));
-            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.runToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(902, 97);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip2.Size = new System.Drawing.Size(83, 44);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // runToolStripMenuItem
-            // 
-            this.runToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(146)))), ((int)(((byte)(47)))));
-            this.runToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
-            this.runToolStripMenuItem.Size = new System.Drawing.Size(69, 36);
-            this.runToolStripMenuItem.Text = "Run";
-            this.runToolStripMenuItem.Click += new System.EventHandler(this.runToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(4, 67);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(315, 44);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.printToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
-            this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
-            this.openToolStripMenuItem.Text = "Open Load Profile";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
-            this.printToolStripMenuItem.Text = "Print";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inputFileToolStripMenuItem,
-            this.substationTransformerParametersToolStripMenuItem,
-            this.loadCyclesAndTemperatureRisesToolStripMenuItem,
-            this.loadProfileToolStripMenuItem});
-            this.toolsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // inputFileToolStripMenuItem
-            // 
-            this.inputFileToolStripMenuItem.Name = "inputFileToolStripMenuItem";
-            this.inputFileToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.inputFileToolStripMenuItem.Text = "Input File";
-            // 
-            // substationTransformerParametersToolStripMenuItem
-            // 
-            this.substationTransformerParametersToolStripMenuItem.Name = "substationTransformerParametersToolStripMenuItem";
-            this.substationTransformerParametersToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.substationTransformerParametersToolStripMenuItem.Text = "Substation Transformer Parameters";
-            // 
-            // loadCyclesAndTemperatureRisesToolStripMenuItem
-            // 
-            this.loadCyclesAndTemperatureRisesToolStripMenuItem.Name = "loadCyclesAndTemperatureRisesToolStripMenuItem";
-            this.loadCyclesAndTemperatureRisesToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.loadCyclesAndTemperatureRisesToolStripMenuItem.Text = "Load Cycles and Temperature Rises";
-            // 
-            // loadProfileToolStripMenuItem
-            // 
-            this.loadProfileToolStripMenuItem.Name = "loadProfileToolStripMenuItem";
-            this.loadProfileToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.loadProfileToolStripMenuItem.Text = "Load Profile";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadingLimitsToolStripMenuItem1,
-            this.hotSpotOfLoadingLimitsToolStripMenuItem,
-            this.lossOfLifeToolStripMenuItem});
-            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.viewToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(78, 36);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // loadingLimitsToolStripMenuItem1
-            // 
-            this.loadingLimitsToolStripMenuItem1.Name = "loadingLimitsToolStripMenuItem1";
-            this.loadingLimitsToolStripMenuItem1.Size = new System.Drawing.Size(375, 36);
-            this.loadingLimitsToolStripMenuItem1.Text = "Loading Limits";
-            // 
-            // hotSpotOfLoadingLimitsToolStripMenuItem
-            // 
-            this.hotSpotOfLoadingLimitsToolStripMenuItem.Name = "hotSpotOfLoadingLimitsToolStripMenuItem";
-            this.hotSpotOfLoadingLimitsToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
-            this.hotSpotOfLoadingLimitsToolStripMenuItem.Text = "Hot Spot of Loading Limits";
-            // 
-            // lossOfLifeToolStripMenuItem
-            // 
-            this.lossOfLifeToolStripMenuItem.Name = "lossOfLifeToolStripMenuItem";
-            this.lossOfLifeToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
-            this.lossOfLifeToolStripMenuItem.Text = "Loss of Life";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutHeatRunAnalysisTool2016ToolStripMenuItem,
-            this.userManualToolStripMenuItem});
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 36);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutHeatRunAnalysisTool2016ToolStripMenuItem
-            // 
-            this.aboutHeatRunAnalysisTool2016ToolStripMenuItem.Name = "aboutHeatRunAnalysisTool2016ToolStripMenuItem";
-            this.aboutHeatRunAnalysisTool2016ToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.aboutHeatRunAnalysisTool2016ToolStripMenuItem.Text = "About Heat Run Analysis Tool 2016";
-            // 
-            // userManualToolStripMenuItem
-            // 
-            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(464, 36);
-            this.userManualToolStripMenuItem.Text = "User Manual";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(70, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Heat Run Analysis Tool 2016";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(853, 91);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1301, 56);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // listView2
             // 
@@ -1014,18 +769,18 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea11.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart1.Legends.Add(legend11);
             this.chart1.Location = new System.Drawing.Point(-8, 0);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "normalseries";
-            this.chart1.Series.Add(series1);
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series17.IsVisibleInLegend = false;
+            series17.Legend = "Legend1";
+            series17.Name = "normalseries";
+            this.chart1.Series.Add(series17);
             this.chart1.Size = new System.Drawing.Size(952, 498);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -1044,18 +799,18 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea12.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart2.Legends.Add(legend12);
             this.chart2.Location = new System.Drawing.Point(-7, 0);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series18.IsVisibleInLegend = false;
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            this.chart2.Series.Add(series18);
             this.chart2.Size = new System.Drawing.Size(952, 498);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -1073,18 +828,18 @@
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            chartArea13.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chart3.Legends.Add(legend13);
             this.chart3.Location = new System.Drawing.Point(-7, 0);
             this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series19.IsVisibleInLegend = false;
+            series19.Legend = "Legend1";
+            series19.Name = "Series1";
+            this.chart3.Series.Add(series19);
             this.chart3.Size = new System.Drawing.Size(952, 498);
             this.chart3.TabIndex = 1;
             this.chart3.Text = "chart3";
@@ -1102,18 +857,18 @@
             // 
             // chart4
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart4.Legends.Add(legend4);
+            chartArea14.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chart4.Legends.Add(legend14);
             this.chart4.Location = new System.Drawing.Point(-7, 0);
             this.chart4.Name = "chart4";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart4.Series.Add(series4);
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series20.IsVisibleInLegend = false;
+            series20.Legend = "Legend1";
+            series20.Name = "Series1";
+            this.chart4.Series.Add(series20);
             this.chart4.Size = new System.Drawing.Size(952, 498);
             this.chart4.TabIndex = 1;
             this.chart4.Text = "chart4";
@@ -1131,33 +886,33 @@
             // 
             // chart5
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart5.Legends.Add(legend5);
+            chartArea15.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chart5.Legends.Add(legend15);
             this.chart5.Location = new System.Drawing.Point(-7, 0);
             this.chart5.Name = "chart5";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series5.Legend = "Legend1";
-            series5.Name = "Normal";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series6.Legend = "Legend1";
-            series6.Name = "PLL";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series7.Legend = "Legend1";
-            series7.Name = "LTELL";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series8.Legend = "Legend1";
-            series8.Name = "STELL";
-            series8.YValuesPerPoint = 2;
-            this.chart5.Series.Add(series5);
-            this.chart5.Series.Add(series6);
-            this.chart5.Series.Add(series7);
-            this.chart5.Series.Add(series8);
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series21.Legend = "Legend1";
+            series21.Name = "Normal";
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series22.Legend = "Legend1";
+            series22.Name = "PLL";
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series23.Legend = "Legend1";
+            series23.Name = "LTELL";
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series24.Legend = "Legend1";
+            series24.Name = "STELL";
+            series24.YValuesPerPoint = 2;
+            this.chart5.Series.Add(series21);
+            this.chart5.Series.Add(series22);
+            this.chart5.Series.Add(series23);
+            this.chart5.Series.Add(series24);
             this.chart5.Size = new System.Drawing.Size(952, 498);
             this.chart5.TabIndex = 2;
             this.chart5.Text = "chart5";
@@ -1170,13 +925,13 @@
             this.tauBox.Size = new System.Drawing.Size(112, 31);
             this.tauBox.TabIndex = 47;
             // 
-            // textBox8
+            // coilWeightBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(97, 642);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(112, 31);
-            this.textBox8.TabIndex = 48;
+            this.coilWeightBox.Location = new System.Drawing.Point(97, 642);
+            this.coilWeightBox.Margin = new System.Windows.Forms.Padding(6);
+            this.coilWeightBox.Name = "coilWeightBox";
+            this.coilWeightBox.Size = new System.Drawing.Size(112, 31);
+            this.coilWeightBox.TabIndex = 48;
             // 
             // label9
             // 
@@ -1189,13 +944,13 @@
             this.label9.TabIndex = 63;
             this.label9.Text = "Coil Weight (lb)";
             // 
-            // textBox9
+            // tankWeightBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(97, 704);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(112, 31);
-            this.textBox9.TabIndex = 49;
+            this.tankWeightBox.Location = new System.Drawing.Point(97, 704);
+            this.tankWeightBox.Margin = new System.Windows.Forms.Padding(6);
+            this.tankWeightBox.Name = "tankWeightBox";
+            this.tankWeightBox.Size = new System.Drawing.Size(112, 31);
+            this.tankWeightBox.TabIndex = 49;
             // 
             // label10
             // 
@@ -1208,13 +963,13 @@
             this.label10.TabIndex = 65;
             this.label10.Text = "Tank Weight (lb)";
             // 
-            // textBox10
+            // oilVolumeBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(97, 756);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(112, 31);
-            this.textBox10.TabIndex = 50;
+            this.oilVolumeBox.Location = new System.Drawing.Point(97, 756);
+            this.oilVolumeBox.Margin = new System.Windows.Forms.Padding(6);
+            this.oilVolumeBox.Name = "oilVolumeBox";
+            this.oilVolumeBox.Size = new System.Drawing.Size(112, 31);
+            this.oilVolumeBox.TabIndex = 50;
             // 
             // label11
             // 
@@ -1227,13 +982,13 @@
             this.label11.TabIndex = 67;
             this.label11.Text = "Oil Volume (gallons)";
             // 
-            // textBox11
+            // totalLossBox
             // 
-            this.textBox11.Location = new System.Drawing.Point(97, 815);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(112, 31);
-            this.textBox11.TabIndex = 51;
+            this.totalLossBox.Location = new System.Drawing.Point(97, 815);
+            this.totalLossBox.Margin = new System.Windows.Forms.Padding(6);
+            this.totalLossBox.Name = "totalLossBox";
+            this.totalLossBox.Size = new System.Drawing.Size(112, 31);
+            this.totalLossBox.TabIndex = 51;
             // 
             // label12
             // 
@@ -1312,11 +1067,247 @@
             this.listView1.TabIndex = 75;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(853, 91);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1301, 56);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(70, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(291, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Heat Run Analysis Tool 2016";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(4, 67);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(252, 44);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
+            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.openToolStripMenuItem.Text = "Open Load Profile";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tempLimits,
+            this.setTransformerLifeToolStripMenuItem,
+            this.timeIntervalToolStripMenuItem,
+            this.temperatureZoneToolStripMenuItem});
+            this.toolsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // tempLimits
+            // 
+            this.tempLimits.Name = "tempLimits";
+            this.tempLimits.Size = new System.Drawing.Size(348, 36);
+            this.tempLimits.Text = "Temperature Limitations";
+            this.tempLimits.Click += new System.EventHandler(this.tempLimits_Click);
+            // 
+            // timeIntervalToolStripMenuItem
+            // 
+            this.timeIntervalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.minToolStripMenuItem,
+            this.hourToolStripMenuItem,
+            this.dayToolStripMenuItem});
+            this.timeIntervalToolStripMenuItem.Name = "timeIntervalToolStripMenuItem";
+            this.timeIntervalToolStripMenuItem.Size = new System.Drawing.Size(348, 36);
+            this.timeIntervalToolStripMenuItem.Text = "Set Time Interval";
+            // 
+            // minToolStripMenuItem
+            // 
+            this.minToolStripMenuItem.Name = "minToolStripMenuItem";
+            this.minToolStripMenuItem.Size = new System.Drawing.Size(164, 36);
+            this.minToolStripMenuItem.Text = "30 min";
+            this.minToolStripMenuItem.Click += new System.EventHandler(this.minToolStripMenuItem_Click);
+            // 
+            // hourToolStripMenuItem
+            // 
+            this.hourToolStripMenuItem.Checked = true;
+            this.hourToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.hourToolStripMenuItem.Name = "hourToolStripMenuItem";
+            this.hourToolStripMenuItem.Size = new System.Drawing.Size(164, 36);
+            this.hourToolStripMenuItem.Text = "Hour";
+            this.hourToolStripMenuItem.Click += new System.EventHandler(this.hourToolStripMenuItem_Click);
+            // 
+            // dayToolStripMenuItem
+            // 
+            this.dayToolStripMenuItem.Name = "dayToolStripMenuItem";
+            this.dayToolStripMenuItem.Size = new System.Drawing.Size(164, 36);
+            this.dayToolStripMenuItem.Text = "Day";
+            this.dayToolStripMenuItem.Click += new System.EventHandler(this.dayToolStripMenuItem_Click);
+            // 
+            // temperatureZoneToolStripMenuItem
+            // 
+            this.temperatureZoneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zone1ToolStripMenuItem,
+            this.zone2ToolStripMenuItem,
+            this.zone3ToolStripMenuItem,
+            this.zone4ToolStripMenuItem});
+            this.temperatureZoneToolStripMenuItem.Name = "temperatureZoneToolStripMenuItem";
+            this.temperatureZoneToolStripMenuItem.Size = new System.Drawing.Size(348, 36);
+            this.temperatureZoneToolStripMenuItem.Text = "Temperature Zone";
+            // 
+            // zone1ToolStripMenuItem
+            // 
+            this.zone1ToolStripMenuItem.Checked = true;
+            this.zone1ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.zone1ToolStripMenuItem.Name = "zone1ToolStripMenuItem";
+            this.zone1ToolStripMenuItem.Size = new System.Drawing.Size(165, 36);
+            this.zone1ToolStripMenuItem.Text = "Zone 1";
+            this.zone1ToolStripMenuItem.Click += new System.EventHandler(this.zone1ToolStripMenuItem_Click);
+            // 
+            // zone2ToolStripMenuItem
+            // 
+            this.zone2ToolStripMenuItem.Name = "zone2ToolStripMenuItem";
+            this.zone2ToolStripMenuItem.Size = new System.Drawing.Size(165, 36);
+            this.zone2ToolStripMenuItem.Text = "Zone 2";
+            this.zone2ToolStripMenuItem.Click += new System.EventHandler(this.zone2ToolStripMenuItem_Click);
+            // 
+            // zone3ToolStripMenuItem
+            // 
+            this.zone3ToolStripMenuItem.Name = "zone3ToolStripMenuItem";
+            this.zone3ToolStripMenuItem.Size = new System.Drawing.Size(165, 36);
+            this.zone3ToolStripMenuItem.Text = "Zone 3";
+            this.zone3ToolStripMenuItem.Click += new System.EventHandler(this.zone3ToolStripMenuItem_Click);
+            // 
+            // zone4ToolStripMenuItem
+            // 
+            this.zone4ToolStripMenuItem.Name = "zone4ToolStripMenuItem";
+            this.zone4ToolStripMenuItem.Size = new System.Drawing.Size(165, 36);
+            this.zone4ToolStripMenuItem.Text = "Zone 4";
+            this.zone4ToolStripMenuItem.Click += new System.EventHandler(this.zone4ToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(146)))), ((int)(((byte)(47)))));
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.runToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(902, 97);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip2.Size = new System.Drawing.Size(83, 44);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // runToolStripMenuItem
+            // 
+            this.runToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(146)))), ((int)(((byte)(47)))));
+            this.runToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
+            this.runToolStripMenuItem.Size = new System.Drawing.Size(69, 36);
+            this.runToolStripMenuItem.Text = "Run";
+            this.runToolStripMenuItem.Click += new System.EventHandler(this.runToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(2091, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 44);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.DimGray;
+            this.button2.Location = new System.Drawing.Point(2027, 17);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(52, 44);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "___";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.menuStrip2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(2154, 147);
+            this.panel1.TabIndex = 30;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(92, 928);
+            this.label14.Location = new System.Drawing.Point(0, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 25);
             this.label14.TabIndex = 76;
@@ -1326,41 +1317,18 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(92, 1000);
+            this.label15.Location = new System.Drawing.Point(445, 926);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 25);
+            this.label15.Size = new System.Drawing.Size(189, 25);
             this.label15.TabIndex = 77;
-            this.label15.Text = "label15";
+            this.label15.Text = "Analysis Summary";
             // 
-            // label16
+            // setTransformerLifeToolStripMenuItem
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(92, 1070);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 25);
-            this.label16.TabIndex = 78;
-            this.label16.Text = "label16";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(92, 1143);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 25);
-            this.label17.TabIndex = 79;
-            this.label17.Text = "label17";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(92, 1223);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 25);
-            this.label18.TabIndex = 80;
-            this.label18.Text = "label18";
+            this.setTransformerLifeToolStripMenuItem.Name = "setTransformerLifeToolStripMenuItem";
+            this.setTransformerLifeToolStripMenuItem.Size = new System.Drawing.Size(348, 36);
+            this.setTransformerLifeToolStripMenuItem.Text = "Set Transformer Life";
+            this.setTransformerLifeToolStripMenuItem.Click += new System.EventHandler(this.setTransformerLifeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -1369,9 +1337,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(2151, 1445);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.listView1);
@@ -1381,13 +1346,13 @@
             this.Controls.Add(this.ONAFButton);
             this.Controls.Add(this.OnanButton);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.totalLossBox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.oilVolumeBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.tankWeightBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.coilWeightBox);
             this.Controls.Add(this.tauBox);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.tabControl1);
@@ -1412,15 +1377,8 @@
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Heat Run Analysis";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -1442,6 +1400,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1462,27 +1428,9 @@
         private System.Windows.Forms.TextBox subnameBox;
         private System.Windows.Forms.TextBox ambientBox;
         private System.Windows.Forms.TextBox mvaBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutHeatRunAnalysisTool2016ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.ToolTip Info;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1539,21 +1487,14 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TextBox tauBox;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox coilWeightBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tankWeightBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox oilVolumeBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox totalLossBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ToolStripMenuItem inputFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem substationTransformerParametersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadCyclesAndTemperatureRisesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadingLimitsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem hotSpotOfLoadingLimitsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lossOfLifeToolStripMenuItem;
         private System.Windows.Forms.RadioButton OnanButton;
         private System.Windows.Forms.RadioButton ONAFButton;
         private System.Windows.Forms.RadioButton nonDirectedOFAF;
@@ -1570,11 +1511,32 @@
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tempLimits;
+        private System.Windows.Forms.ToolStripMenuItem timeIntervalToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem minToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temperatureZoneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zone1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zone2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zone3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zone4ToolStripMenuItem;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ToolStripMenuItem setTransformerLifeToolStripMenuItem;
     }
 }
 

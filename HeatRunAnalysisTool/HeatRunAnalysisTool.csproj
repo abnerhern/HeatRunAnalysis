@@ -62,11 +62,26 @@
     <Compile Include="NormalLoadingLimit.cs" />
     <Compile Include="PlannedLoadingLimit.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortTermLoadingLimit.cs" />
     <Compile Include="SubstationTransformer.cs" />
+    <Compile Include="ThresholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThresholdForm.Designer.cs">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThresholdForm.resx">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

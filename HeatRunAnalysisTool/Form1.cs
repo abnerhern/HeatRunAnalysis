@@ -25,9 +25,6 @@ namespace HeatRunAnalysisTool
 
         // Loading Limits
         private NormalLoadingLimit nll;
-       // private PlannedLoadingLimit pll;
-        //private LongTermLoadingLimit ltll;
-        //private ShortTermLoadingLimit stll;
 
         private LoadingLimit pll;
         private LoadingLimit ltll;
@@ -42,10 +39,42 @@ namespace HeatRunAnalysisTool
         private bool isUploaded = false;
 
 
+        // Thresholds
+        private double pllThesh = 120;
+        private double ltllThresh = 140;
+        private double stllThresh = 180;
+
+        // Time interval
+        private double timeInt = 1;
+
+        //Ambient Temp for Zones
+        private double ambientTemp = 30;
+
+        // Transformer Life
+        private double xfrmrLife = 180000;
+
+
         // Intialized Class
         public Form1()
         {
             InitializeComponent();
+
+            subnameBox.Text = "Kramer";
+            mvaBox.Text ="187";
+            ambientBox.Text = "30";
+            deltaThetaHS_RBox.Text = "28.6"; 
+            deltaThetaTORBox.Text = "36";
+            ratioBox.Text = "4.87";
+            tauBox.Text = "3.5";
+
+            coilWeightBox.Text = "123";
+            tankWeightBox.Text = "123";
+            oilVolumeBox.Text = "123";
+            totalLossBox.Text = "123";
+
+           // label14.
+
+           // this.ControlBox = false;
             
         }
 
@@ -93,7 +122,6 @@ namespace HeatRunAnalysisTool
         // Run All for heat run analysis
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show(mvaBox.Text);
 
             // Must check to see if there is any text on the field
             // Makes a temp
@@ -105,29 +133,39 @@ namespace HeatRunAnalysisTool
                     throw new System.ArgumentException("No load profile uploaded", "original"); 
                 }
 
+                //ProgressForm pf = new ProgressForm();
+                //pf.ShowDialog();
+
                 // Set the transformer parameters
                 setXfrmr();
+                //pf.increaseProgress(20);
                 
 
                 // Set the loading limits and its formulas
                 setLoadingLimits();
+               // pf.increaseProgress(40);
 
                 // Calculate loss of life
                 calculateLoss();
+               // pf.increaseProgress(50);
 
                 
 
                 // Paint the graphs
                 paintGraph();
+              //  pf.increaseProgress(60);
 
                 //Populates the table
                 populateTable();
+              //  pf.increaseProgress(100);
                 
                 // Show the tables
                 loadCover1.Visible = false;
                 loadCover2.Visible = false;
                 loadCover3.Visible = false;
                 loadCover4.Visible = false;
+
+              //  pf.Close();
             }
            catch(Exception e1)
             {
@@ -145,7 +183,18 @@ namespace HeatRunAnalysisTool
 
             // fill Susbtation transformer parameters
             this.xfrmr.fillMoreInfo(coolingMode, Convert.ToDouble(deltaThetaHS_RBox.Text), Convert.ToDouble(deltaThetaTORBox.Text), Convert.ToDouble(ratioBox.Text));
+            
+            // Check to see if TauBox is empty
+            if (!string.IsNullOrWhiteSpace(tauBox.Text))
+            {
             this.xfrmr.setTauTO_R(Convert.ToDouble(tauBox.Text));
+            }
+            else
+            {
+                this.xfrmr.fillMoreInfoTwo(Convert.ToDouble(coilWeightBox.Text) ,
+                Convert.ToDouble(tankWeightBox.Text),Convert.ToDouble(oilVolumeBox.Text),Convert.ToDouble(totalLossBox.Text) );
+            } 
+
         }
 
 
@@ -161,12 +210,10 @@ namespace HeatRunAnalysisTool
 
         private void setLoadingLimits() 
         {
-            this.nll = new NormalLoadingLimit(this.loadMult.getNormalLoadProfile(), this.xfrmr, 0, 1);
-            this.pll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
-            this.ltll = new LoadingLimit(this.loadMult.getLTELLLoadProfile(), this.xfrmr, 0, 1);
-            this.stll = new LoadingLimit(this.loadMult.getSTELLoadProfile(), this.xfrmr, 0, 1);
-
-            //this.testll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, 0, 1);
+            this.nll = new NormalLoadingLimit(this.loadMult.getNormalLoadProfile(), this.xfrmr, 0, this.timeInt);
+            this.pll = new LoadingLimit(this.loadMult.getPLLLoadProfile(), this.xfrmr, this.pllThesh, this.timeInt);
+            this.ltll = new LoadingLimit(this.loadMult.getLTELLLoadProfile(), this.xfrmr, this.ltllThresh, this.timeInt);
+            this.stll = new LoadingLimit(this.loadMult.getSTELLoadProfile(), this.xfrmr, this.stllThresh, this.timeInt);
         }
 
         private void calculateLoss()
@@ -300,7 +347,7 @@ namespace HeatRunAnalysisTool
                 dataGridView1.Rows[i].Cells[3].Value = nll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView1.Rows[i].Cells[4].Value = nll.getHotSpotTemp()[i]; // Hot Spot Temp
                 dataGridView1.Rows[i].Cells[5].Value = nll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
-                dataGridView1.Rows[i].Cells[6].Value = 3; // Tau
+                dataGridView1.Rows[i].Cells[6].Value = nll.getTau()[i]; // Tau
                 dataGridView1.Rows[i].Cells[7].Value = lossNll.getFaa()[i]; // Faa
                 dataGridView1.Rows[i].Cells[8].Value = lossNll.getFaa()[i]; // Aging Hour    
                 dataGridView1.Rows[i].Cells[9].Value = lossNll.getCumAging()[i]; // Cummulative Aging  
@@ -497,6 +544,96 @@ namespace HeatRunAnalysisTool
         }
 
         private void chart1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tempLimits_Click(object sender, EventArgs e)
+        {
+            // Open form that changes the temperature limitations
+
+            ThresholdForm tf = new ThresholdForm(pllThesh.ToString() ,ltllThresh.ToString(), stllThresh.ToString() );
+
+            tf.ShowDialog();
+
+
+            if (tf.getIsOkay())
+            {
+                this.pllThesh = tf.getPllThresh();
+                this.ltllThresh = tf.getLtllThresh();
+                this.stllThresh = tf.getSTLLThresh();
+            }
+            else
+            {
+                tf.Close();
+            }
+
+            //tf.Close();
+           
+        }
+
+        //
+        private void hourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hourToolStripMenuItem.Checked = true;
+            minToolStripMenuItem.Checked = false;
+            dayToolStripMenuItem.Checked = false;
+            this.timeInt = 1;
+        }
+
+        private void minToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            minToolStripMenuItem.Checked = true;
+            hourToolStripMenuItem.Checked = false;
+            dayToolStripMenuItem.Checked = false;
+            this.timeInt = 0.5;
+        }
+
+        private void dayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dayToolStripMenuItem.Checked = true;
+            hourToolStripMenuItem.Checked = false;
+            minToolStripMenuItem.Checked = false;
+            this.timeInt = 24;
+        }
+
+        // Temperature Zone Buttons
+        private void zone1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zone1ToolStripMenuItem.Checked = true;
+            zone2ToolStripMenuItem.Checked = false;
+            zone3ToolStripMenuItem.Checked = false;
+            zone4ToolStripMenuItem.Checked = false;
+
+
+        }
+
+        private void zone2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zone1ToolStripMenuItem.Checked = false;
+            zone2ToolStripMenuItem.Checked = true;
+            zone3ToolStripMenuItem.Checked = false;
+            zone4ToolStripMenuItem.Checked = false;
+        }
+
+        private void zone3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zone1ToolStripMenuItem.Checked = false;
+            zone2ToolStripMenuItem.Checked = false;
+            zone3ToolStripMenuItem.Checked = true;
+            zone4ToolStripMenuItem.Checked = false;
+        }
+
+        private void zone4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            zone1ToolStripMenuItem.Checked = false;
+            zone2ToolStripMenuItem.Checked = false;
+            zone3ToolStripMenuItem.Checked = false;
+            zone4ToolStripMenuItem.Checked = true;
+        }
+
+        // Open GUI for Life
+        private void setTransformerLifeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
