@@ -15,14 +15,17 @@ namespace HeatRunAnalysisTool
         private double ltllThresh;
         private double stllThresh;
 
-        private bool isOkay = true;
-
         public ThresholdForm(String pll, String ltll, String stll)
         {
             InitializeComponent();
             textBox1.Text = pll;
             textBox2.Text = ltll;
             textBox3.Text = stll;
+
+            this.pllThesh = Convert.ToDouble(textBox1.Text);
+            this.ltllThresh = Convert.ToDouble(textBox2.Text);
+            this.stllThresh = Convert.ToDouble(textBox3.Text);
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -45,7 +48,7 @@ namespace HeatRunAnalysisTool
                 this.stllThresh = Convert.ToDouble(textBox3.Text);
 
                 this.Close();
-                this.isOkay = true;
+                
             }
             catch 
             {
@@ -59,7 +62,7 @@ namespace HeatRunAnalysisTool
         // When clicked Cancel
         private void button2_Click(object sender, EventArgs e)
         {
-            this.isOkay = false;
+           
             this.Close();
         }
 
@@ -80,9 +83,6 @@ namespace HeatRunAnalysisTool
             return this.stllThresh;
         }
 
-        public bool getIsOkay()
-        {
-            return isOkay;
-        }
+       
     }
 }

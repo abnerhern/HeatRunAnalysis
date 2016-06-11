@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -152,6 +152,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tempLimits = new System.Windows.Forms.ToolStripMenuItem();
+            this.setTransformerLifeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeIntervalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,9 +168,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.setTransformerLifeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -769,18 +772,18 @@
             // 
             // chart1
             // 
-            chartArea11.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart1.Legends.Add(legend11);
+            chartArea16.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.chart1.Legends.Add(legend16);
             this.chart1.Location = new System.Drawing.Point(-8, 0);
             this.chart1.Name = "chart1";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series17.IsVisibleInLegend = false;
-            series17.Legend = "Legend1";
-            series17.Name = "normalseries";
-            this.chart1.Series.Add(series17);
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series25.IsVisibleInLegend = false;
+            series25.Legend = "Legend1";
+            series25.Name = "normalseries";
+            this.chart1.Series.Add(series25);
             this.chart1.Size = new System.Drawing.Size(952, 498);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -799,18 +802,18 @@
             // 
             // chart2
             // 
-            chartArea12.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart2.Legends.Add(legend12);
+            chartArea17.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.chart2.Legends.Add(legend17);
             this.chart2.Location = new System.Drawing.Point(-7, 0);
             this.chart2.Name = "chart2";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series18.IsVisibleInLegend = false;
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chart2.Series.Add(series18);
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series26.IsVisibleInLegend = false;
+            series26.Legend = "Legend1";
+            series26.Name = "Series1";
+            this.chart2.Series.Add(series26);
             this.chart2.Size = new System.Drawing.Size(952, 498);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -828,18 +831,18 @@
             // 
             // chart3
             // 
-            chartArea13.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart3.Legends.Add(legend13);
+            chartArea18.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chart3.Legends.Add(legend18);
             this.chart3.Location = new System.Drawing.Point(-7, 0);
             this.chart3.Name = "chart3";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series19.IsVisibleInLegend = false;
-            series19.Legend = "Legend1";
-            series19.Name = "Series1";
-            this.chart3.Series.Add(series19);
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series27.IsVisibleInLegend = false;
+            series27.Legend = "Legend1";
+            series27.Name = "Series1";
+            this.chart3.Series.Add(series27);
             this.chart3.Size = new System.Drawing.Size(952, 498);
             this.chart3.TabIndex = 1;
             this.chart3.Text = "chart3";
@@ -857,18 +860,18 @@
             // 
             // chart4
             // 
-            chartArea14.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chart4.Legends.Add(legend14);
+            chartArea19.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea19);
+            legend19.Name = "Legend1";
+            this.chart4.Legends.Add(legend19);
             this.chart4.Location = new System.Drawing.Point(-7, 0);
             this.chart4.Name = "chart4";
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series20.IsVisibleInLegend = false;
-            series20.Legend = "Legend1";
-            series20.Name = "Series1";
-            this.chart4.Series.Add(series20);
+            series28.ChartArea = "ChartArea1";
+            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series28.IsVisibleInLegend = false;
+            series28.Legend = "Legend1";
+            series28.Name = "Series1";
+            this.chart4.Series.Add(series28);
             this.chart4.Size = new System.Drawing.Size(952, 498);
             this.chart4.TabIndex = 1;
             this.chart4.Text = "chart4";
@@ -886,33 +889,33 @@
             // 
             // chart5
             // 
-            chartArea15.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chart5.Legends.Add(legend15);
+            chartArea20.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea20);
+            legend20.Name = "Legend1";
+            this.chart5.Legends.Add(legend20);
             this.chart5.Location = new System.Drawing.Point(-7, 0);
             this.chart5.Name = "chart5";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series21.Legend = "Legend1";
-            series21.Name = "Normal";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series22.Legend = "Legend1";
-            series22.Name = "PLL";
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series23.Legend = "Legend1";
-            series23.Name = "LTELL";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series24.Legend = "Legend1";
-            series24.Name = "STELL";
-            series24.YValuesPerPoint = 2;
-            this.chart5.Series.Add(series21);
-            this.chart5.Series.Add(series22);
-            this.chart5.Series.Add(series23);
-            this.chart5.Series.Add(series24);
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series29.Legend = "Legend1";
+            series29.Name = "Normal";
+            series30.ChartArea = "ChartArea1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series30.Legend = "Legend1";
+            series30.Name = "PLL";
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series31.Legend = "Legend1";
+            series31.Name = "LTELL";
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series32.Legend = "Legend1";
+            series32.Name = "STELL";
+            series32.YValuesPerPoint = 2;
+            this.chart5.Series.Add(series29);
+            this.chart5.Series.Add(series30);
+            this.chart5.Series.Add(series31);
+            this.chart5.Series.Add(series32);
             this.chart5.Size = new System.Drawing.Size(952, 498);
             this.chart5.TabIndex = 2;
             this.chart5.Text = "chart5";
@@ -1086,9 +1089,9 @@
             this.label1.Location = new System.Drawing.Point(70, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 25);
+            this.label1.Size = new System.Drawing.Size(237, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Heat Run Analysis Tool 2016";
+            this.label1.Text = "Heat Run Analysis Tool";
             // 
             // menuStrip1
             // 
@@ -1101,7 +1104,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(252, 44);
+            this.menuStrip1.Size = new System.Drawing.Size(160, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1149,6 +1152,13 @@
             this.tempLimits.Size = new System.Drawing.Size(348, 36);
             this.tempLimits.Text = "Temperature Limitations";
             this.tempLimits.Click += new System.EventHandler(this.tempLimits_Click);
+            // 
+            // setTransformerLifeToolStripMenuItem
+            // 
+            this.setTransformerLifeToolStripMenuItem.Name = "setTransformerLifeToolStripMenuItem";
+            this.setTransformerLifeToolStripMenuItem.Size = new System.Drawing.Size(348, 36);
+            this.setTransformerLifeToolStripMenuItem.Text = "Set Transformer Life";
+            this.setTransformerLifeToolStripMenuItem.Click += new System.EventHandler(this.setTransformerLifeToolStripMenuItem_Click);
             // 
             // timeIntervalToolStripMenuItem
             // 
@@ -1304,15 +1314,6 @@
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 25);
-            this.label14.TabIndex = 76;
-            this.label14.Text = "label14";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1323,12 +1324,46 @@
             this.label15.TabIndex = 77;
             this.label15.Text = "Analysis Summary";
             // 
-            // setTransformerLifeToolStripMenuItem
+            // label14
             // 
-            this.setTransformerLifeToolStripMenuItem.Name = "setTransformerLifeToolStripMenuItem";
-            this.setTransformerLifeToolStripMenuItem.Size = new System.Drawing.Size(348, 36);
-            this.setTransformerLifeToolStripMenuItem.Text = "Set Transformer Life";
-            this.setTransformerLifeToolStripMenuItem.Click += new System.EventHandler(this.setTransformerLifeToolStripMenuItem_Click);
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(92, 1053);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(244, 25);
+            this.label14.TabIndex = 78;
+            this.label14.Text = "Loss Of Life for Normal: ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(92, 1097);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(220, 25);
+            this.label16.TabIndex = 79;
+            this.label16.Text = "Loss Of Life for PLL:  ";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(92, 1144);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(239, 25);
+            this.label17.TabIndex = 80;
+            this.label17.Text = "Loss Of Life for LTELL: ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(92, 1190);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(241, 25);
+            this.label18.TabIndex = 81;
+            this.label18.Text = "Loss Of Life for STELL: ";
             // 
             // Form1
             // 
@@ -1337,8 +1372,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(2151, 1445);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.DirectedOFAFButton);
@@ -1534,9 +1572,12 @@
         private System.Windows.Forms.ToolStripMenuItem zone2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zone3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zone4ToolStripMenuItem;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolStripMenuItem setTransformerLifeToolStripMenuItem;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }
 

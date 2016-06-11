@@ -49,6 +49,8 @@ namespace HeatRunAnalysisTool
         private double tauTO_R; // Time constant at rated kilo volt ampere, we get this when 
         // if n = 1 then, tauO = tauR. To be calculated later in a PLL class or equivalent
 
+        private double totalLife = 180000;
+
         
 //****************************************************CONSTRUCTOR*******************************************************************
 //*****************************Takes in the parameters of substation name, mvarating, loadprofile***********************************
@@ -225,6 +227,11 @@ namespace HeatRunAnalysisTool
             return this.tauTO_R;
         }
 
+        public double getTotalLife()
+        {
+            return this.totalLife;
+        }
+
 
 //***************************************************SETTERS********************************************************
         
@@ -242,6 +249,11 @@ namespace HeatRunAnalysisTool
         public void setTauTO_R(double tauTO_R)
         {
             this.tauTO_R = tauTO_R;
+        }
+
+        public void setTotalLife(double totalLife)
+        {
+            this.totalLife = totalLife;
         }
 
     }

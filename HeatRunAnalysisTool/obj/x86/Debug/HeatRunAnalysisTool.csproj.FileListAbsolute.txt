@@ -14,4 +14,4 @@ C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRun
 C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRunAnalysisTool\obj\x86\Debug\HeatRunAnalysisTool.Properties.Resources.resources
 C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRunAnalysisTool\obj\x86\Debug\HeatRunAnalysisTool.csproj.GenerateResource.Cache
 C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRunAnalysisTool\obj\x86\Debug\HeatRunAnalysisTool.ThresholdForm.resources
-C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRunAnalysisTool\obj\x86\Debug\HeatRunAnalysisTool.ProgressForm.resources
+C:\Users\abner\Documents\Visual Studio 2012\Projects\HeatRunAnalysisTool\HeatRunAnalysisTool\obj\x86\Debug\HeatRunAnalysisTool.TransfomerLifeForm.resources

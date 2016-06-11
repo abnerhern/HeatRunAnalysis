@@ -45,7 +45,7 @@ namespace HeatRunAnalysisTool
 
             for (int i = 0; i < Faa.Length; i++)
             {
-                Faa[i] = Math.Exp((39.16449 - 15000 / (273 + Hot_spot_temp[i])));
+                Faa[i] = Math.Exp((39.16449 - (15000 / (273 + Hot_spot_temp[i])) ));
                 Aging_hour[i] = Faa[i];
             }
         

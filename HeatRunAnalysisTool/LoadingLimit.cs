@@ -27,6 +27,15 @@ namespace HeatRunAnalysisTool
 
         private double[] tauTO; // TauO
 
+        // Loss of Life Parameters
+        private double[] Faa;
+        private double[] Aging_hour;
+        private double[] Cum_Aging_hour;
+        private double[] LossOfLifeHour;
+
+        private double LossOfLifeTotal;
+
+
         private double t; // Time interval. 1 is hour. 0.5 is half an hour
 
         private SubstationTransformer xfrmr; // Store transformer characteristics
@@ -55,6 +64,11 @@ namespace HeatRunAnalysisTool
             topOilTemp= new double[perUnitValues.Length];
             hottestSpotTemp = new double[perUnitValues.Length];
             tauTO = new double[perUnitValues.Length];
+            Faa = new double[perUnitValues.Length];
+            Aging_hour = new double[perUnitValues.Length];
+            Cum_Aging_hour = new double[perUnitValues.Length];
+            LossOfLifeHour = new double[perUnitValues.Length];
+
 
             // Calculate Information:
             calculateInfo();
@@ -91,6 +105,13 @@ namespace HeatRunAnalysisTool
                     // Get Hottest Spot Temperautre
                     hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
 
+                    // Loss of Life Calculations
+                    Faa[i] = Math.Exp( ((15000 / 383) - ((15000) / (hottestSpotTemp[i] + 273 ) ) ) );
+                    Aging_hour[i] = Faa[i];
+                    Cum_Aging_hour[i] = Faa[i];
+
+                    
+
                     // Continue the rest of the loop
                     continue;
                 }
@@ -112,7 +133,16 @@ namespace HeatRunAnalysisTool
                 // Get Hottest Spot Temperautre
                 hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
 
+                // Loss of Life Calculations
+                Faa[i] = Math.Exp( ( (15000 / 383) - ((15000) / (hottestSpotTemp[i] + 273))) );
+                Aging_hour[i] = Faa[i];
+                Cum_Aging_hour[i] = Faa[i] + Cum_Aging_hour[i -1];
+
             }
+
+
+            this.LossOfLifeTotal =  Math.Round( ((Cum_Aging_hour[Cum_Aging_hour.Length - 1]) * 100) / (xfrmr.getTotalLife()), 4 ); // (  (Cum_Aging_hour[Cum_Aging_hour.Length - 1] ) *  100 ) / (xfrmr.getTotalLife() );
+
         
         }
 
@@ -156,6 +186,27 @@ namespace HeatRunAnalysisTool
         {
             return tauTO;
         }
+
+        public double[] getFaa()
+        {
+            return Faa;
+        }
+
+        public double[] getAgingHour()
+        {
+            return Aging_hour;
+        }
+
+        public double[] getCumAging()
+        {
+            return Cum_Aging_hour;
+        }
+
+        public double getLossOfLife()
+        {
+            return LossOfLifeTotal;
+        }
+
 
     }
 

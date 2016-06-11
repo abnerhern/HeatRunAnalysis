@@ -165,6 +165,10 @@ namespace HeatRunAnalysisTool
                 loadCover3.Visible = false;
                 loadCover4.Visible = false;
 
+                label14.Text = "Loss Of Life for Normal: " ;
+                label16.Text = "Loss Of Life for PLL: " + pll.getLossOfLife() + "%";
+                label17.Text = "Loss Of Life for LTELL: " + ltll.getLossOfLife() + "%";
+                label18.Text = "Loss Of Life for STELL: " + stll.getLossOfLife() + "%";
               //  pf.Close();
             }
            catch(Exception e1)
@@ -193,7 +197,9 @@ namespace HeatRunAnalysisTool
             {
                 this.xfrmr.fillMoreInfoTwo(Convert.ToDouble(coilWeightBox.Text) ,
                 Convert.ToDouble(tankWeightBox.Text),Convert.ToDouble(oilVolumeBox.Text),Convert.ToDouble(totalLossBox.Text) );
-            } 
+            }
+ 
+          this.xfrmr.setTotalLife(this.xfrmrLife);
 
         }
 
@@ -399,7 +405,7 @@ namespace HeatRunAnalysisTool
             {
                 dataGridView4.Rows.Add();
                 dataGridView4.Rows[i].Cells[0].Value = i + 1; // Hour
-                dataGridView4.Rows[i].Cells[1].Value = loadMult.getLTELLLoadProfile()[i]; // Load
+                dataGridView4.Rows[i].Cells[1].Value = loadMult.getSTELLoadProfile()[i]; // Load
                 dataGridView4.Rows[i].Cells[2].Value = 30; // Ambient Temp
                 dataGridView4.Rows[i].Cells[3].Value = stll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView4.Rows[i].Cells[4].Value = stll.getHotSpotTemp()[i]; // Hot Spot Temp
@@ -557,18 +563,14 @@ namespace HeatRunAnalysisTool
             tf.ShowDialog();
 
 
-            if (tf.getIsOkay())
-            {
+            
                 this.pllThesh = tf.getPllThresh();
                 this.ltllThresh = tf.getLtllThresh();
                 this.stllThresh = tf.getSTLLThresh();
-            }
-            else
-            {
-                tf.Close();
-            }
 
-            //tf.Close();
+                tf.Close();
+
+           
            
         }
 
@@ -632,8 +634,24 @@ namespace HeatRunAnalysisTool
             zone4ToolStripMenuItem.Checked = true;
         }
 
-        // Open GUI for Life
+        // Open GUI for Transformer Life
         private void setTransformerLifeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TransfomerLifeForm tl = new TransfomerLifeForm(xfrmrLife.ToString());
+
+            tl.ShowDialog();
+
+            this.xfrmrLife = tl.getXfrmrLife();
+
+            tl.Close();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
