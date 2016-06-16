@@ -42,9 +42,9 @@ namespace HeatRunAnalysisTool
 
         private double threshold; //Stores the threshold value for the maximum
 
+        private int maxPerUnitIndex; // Stores the maximim perunit value possible for this loading limit
         private double maxPerUnit; // Stores the maximim perunit value possible for this loading limit
-
-
+        
         public LoadingLimit() { }
 
         public LoadingLimit(double[] perUnitValues, SubstationTransformer xfrmr, double threshold, double t)
@@ -55,7 +55,9 @@ namespace HeatRunAnalysisTool
             this.threshold = threshold;
             this.t = t;
 
-
+            this.maxPerUnit = perUnitValues.Max();
+            this.maxPerUnitIndex = Array.IndexOf(perUnitValues, maxPerUnit);
+            
             calculateKRMS();
 
             // Sets the array lengths for each array
@@ -104,14 +106,7 @@ namespace HeatRunAnalysisTool
 
                     // Get Hottest Spot Temperautre
                     hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
-
-                    // Loss of Life Calculations
-                    Faa[i] = Math.Exp( ((15000 / 383) - ((15000) / (hottestSpotTemp[i] + 273 ) ) ) );
-                    Aging_hour[i] = Faa[i];
-                    Cum_Aging_hour[i] = Faa[i];
-
-                    
-
+                  
                     // Continue the rest of the loop
                     continue;
                 }
@@ -133,17 +128,19 @@ namespace HeatRunAnalysisTool
                 // Get Hottest Spot Temperautre
                 hottestSpotTemp[i] = topOilTemp[i] + hotSpotTemp[i] + xfrmr.getAmbientTemp();
 
-                // Loss of Life Calculations
-                Faa[i] = Math.Exp( ( (15000 / 383) - ((15000) / (hottestSpotTemp[i] + 273))) );
-                Aging_hour[i] = Faa[i];
-                Cum_Aging_hour[i] = Faa[i] + Cum_Aging_hour[i -1];
+                // Check threshold
+                if (hottestSpotTemp[i] > threshold)
+                {
+                    perUnitValues[i] = perUnitValues[i] - 0.01;
+                    i--;
+                }
+
+                // Check if max is below threshold. If so increase it, until it is below threshold
+                // Make sure to stop increasing it at a certain point or else infinite loop!
 
             }
 
-
-            this.LossOfLifeTotal =  Math.Round( ((Cum_Aging_hour[Cum_Aging_hour.Length - 1]) * 100) / (xfrmr.getTotalLife()), 4 ); // (  (Cum_Aging_hour[Cum_Aging_hour.Length - 1] ) *  100 ) / (xfrmr.getTotalLife() );
-
-        
+            this.maxPerUnit = perUnitValues.Max();
         }
 
 
@@ -207,7 +204,15 @@ namespace HeatRunAnalysisTool
             return LossOfLifeTotal;
         }
 
+        public double[] getAmbientTempArr() 
+        {
+            return this.xfrmr.getAmbientTempArr();
+        }
 
+        public double getMaxPerUnit()
+        {
+            return this.maxPerUnit;
+        }
     }
 
 }

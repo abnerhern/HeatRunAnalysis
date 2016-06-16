@@ -4,15 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * *************************************
- * FileRetrieval.cs
- * Created by Abner Joel Hernandez
- * Date: 2/13/2016
- * Version 0.1
- * 
- * ************************************
- */
 
 namespace HeatRunAnalysisTool
 {
@@ -25,6 +16,12 @@ namespace HeatRunAnalysisTool
         private string substation_name; // Name of the Transformer
         private double mvaRating;
         private double ambientTemp; //Ambient Temp Might be an array if this value isn’t constant
+
+       // private double[] ambientTempArr;
+        private double[] ambientTempArr = new double[] { 31, 30, 30, 30, 30, 
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
 
         /*ONAN = 1, ONAF = 2, Non-Directed OFAF or OFWF = 3,
          Directed ODAF or ODWF = 4*/
@@ -225,6 +222,11 @@ namespace HeatRunAnalysisTool
         public double getTauTO_R() 
         {
             return this.tauTO_R;
+        }
+
+        public double[] getAmbientTempArr()
+        {
+            return this.ambientTempArr;
         }
 
         public double getTotalLife()

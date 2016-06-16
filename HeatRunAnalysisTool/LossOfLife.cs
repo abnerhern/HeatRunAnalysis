@@ -69,7 +69,7 @@ namespace HeatRunAnalysisTool
 
         private void calculateLossOfLife()
         {
-            this.Loss_Of_Life =  Math.Round(24 * 100 * Cum_Aging_hour[23] / 180000 ,3 );
+            this.Loss_Of_Life =  Math.Round(100 * Cum_Aging_hour[Cum_Aging_hour.Length - 1] / 180000 , 3 );
         }
 
 

@@ -24,6 +24,7 @@ namespace HeatRunAnalysisTool
         //From normal load
         private double[] loadMultSCE = new double[3] { 1.1, 1.4, 1.6 };
 
+        // Depends on the hours
         private double[] loadMultIEEE = new double[3] { 1.26, 1.39, 2.06 };
 
         private double[] normalLP;

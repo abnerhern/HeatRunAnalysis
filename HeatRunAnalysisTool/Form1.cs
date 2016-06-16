@@ -45,10 +45,15 @@ namespace HeatRunAnalysisTool
         private double stllThresh = 180;
 
         // Time interval
-        private double timeInt = 1;
+        private double timeInt = 0.5;
 
         //Ambient Temp for Zones
         private double ambientTemp = 30;
+
+        private double[] ambientTempArr = new double[] { 31, 30, 30, 30, 30, 
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+            30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 };
 
         // Transformer Life
         private double xfrmrLife = 180000;
@@ -165,10 +170,16 @@ namespace HeatRunAnalysisTool
                 loadCover3.Visible = false;
                 loadCover4.Visible = false;
 
-                label14.Text = "Loss Of Life for Normal: " ;
-                label16.Text = "Loss Of Life for PLL: " + pll.getLossOfLife() + "%";
-                label17.Text = "Loss Of Life for LTELL: " + ltll.getLossOfLife() + "%";
-                label18.Text = "Loss Of Life for STELL: " + stll.getLossOfLife() + "%";
+                label14.Text = "Loss Of Life for Normal: " + lossNll.getLossOfLife() +"%" ;
+                label16.Text = "Loss Of Life for PLL: " + lossPll.getLossOfLife() + "%";
+                label17.Text = "Loss Of Life for LTELL: " + lossLtll.getLossOfLife() + "%";
+                label18.Text = "Loss Of Life for STELL: " + lossStll.getLossOfLife() + "%";
+
+                label19.Text = "Max Normal Overload: " + (this.xfrmr.getMVARating() * nll.getMaxPerUnit() ) ;
+                label20.Text = "Max PLL Overload: " + (this.xfrmr.getMVARating() * pll.getMaxPerUnit() ) ;
+                label21.Text = "Max LTELL Overload: " + (this.xfrmr.getMVARating() * ltll.getMaxPerUnit());
+                label22.Text = "Max STELL Overload: " + ( this.xfrmr.getMVARating() * stll.getMaxPerUnit() );
+
               //  pf.Close();
             }
            catch(Exception e1)
@@ -349,7 +360,7 @@ namespace HeatRunAnalysisTool
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].Cells[0].Value = i + 1; // Hour
                 dataGridView1.Rows[i].Cells[1].Value = loadMult.getNormalLoadProfile()[i]; // Load
-                dataGridView1.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView1.Rows[i].Cells[2].Value = ambientTemp; // Ambient Temp
                 dataGridView1.Rows[i].Cells[3].Value = nll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView1.Rows[i].Cells[4].Value = nll.getHotSpotTemp()[i]; // Hot Spot Temp
                 dataGridView1.Rows[i].Cells[5].Value = nll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
@@ -368,7 +379,7 @@ namespace HeatRunAnalysisTool
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[i].Cells[0].Value = i + 1; // Hour
                 dataGridView2.Rows[i].Cells[1].Value = loadMult.getPLLLoadProfile()[i]; // Load
-                dataGridView2.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView2.Rows[i].Cells[2].Value = ambientTemp; // Ambient Temp
                 dataGridView2.Rows[i].Cells[3].Value = pll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView2.Rows[i].Cells[4].Value = pll.getHotSpotTemp()[i]; // Hot Spot Temp
                 dataGridView2.Rows[i].Cells[5].Value = pll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
@@ -387,7 +398,7 @@ namespace HeatRunAnalysisTool
                 dataGridView5.Rows.Add();
                 dataGridView5.Rows[i].Cells[0].Value = i + 1; // Hour
                 dataGridView5.Rows[i].Cells[1].Value = loadMult.getLTELLLoadProfile()[i]; // Load
-                dataGridView5.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView5.Rows[i].Cells[2].Value = ambientTemp;// Ambient Temp
                 dataGridView5.Rows[i].Cells[3].Value = ltll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView5.Rows[i].Cells[4].Value = ltll.getHotSpotTemp()[i]; // Hot Spot Temp
                 dataGridView5.Rows[i].Cells[5].Value = ltll.getHottestSpotTemp()[i]; // Hottest Spot Temp 
@@ -406,7 +417,7 @@ namespace HeatRunAnalysisTool
                 dataGridView4.Rows.Add();
                 dataGridView4.Rows[i].Cells[0].Value = i + 1; // Hour
                 dataGridView4.Rows[i].Cells[1].Value = loadMult.getSTELLoadProfile()[i]; // Load
-                dataGridView4.Rows[i].Cells[2].Value = 30; // Ambient Temp
+                dataGridView4.Rows[i].Cells[2].Value = ambientTemp; // Ambient Temp
                 dataGridView4.Rows[i].Cells[3].Value = stll.getTopOilTemp()[i]; // Top Oil Temp
                 dataGridView4.Rows[i].Cells[4].Value = stll.getHotSpotTemp()[i]; // Hot Spot Temp
                 dataGridView4.Rows[i].Cells[5].Value = stll.getHottestSpotTemp()[i]; // Hottest Spot Temp 

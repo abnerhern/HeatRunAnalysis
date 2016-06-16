@@ -28,6 +28,7 @@ namespace HeatRunAnalysisTool
        
         private string filePath; // The file path given to the user
         List<double> loadProfile = new List<double>(); // This will store the loading profile
+        
 
 
 
@@ -116,6 +117,43 @@ namespace HeatRunAnalysisTool
         public double[] getArray()
         {
             return loadProfile.ToArray(); 
+        }
+
+        public double[] getArrayHalfHour() 
+        {
+            double[] halfHourArray = new double[48];
+
+            for (int i = 0; i < 48; i++ )
+            {
+                halfHourArray[i] = loadProfile[i];
+            }
+
+            return halfHourArray;
+
+        }
+
+        public double[] getArrayYear()
+        {
+            double[] yearArray = new double[365];
+
+            for (int i = 47; i < loadProfile.Count; i++ )
+            {
+                yearArray[i] = loadProfile[i];
+            }
+
+            return yearArray;
+
+        }
+
+        public void setPerUnitValues()
+        {
+            double max = loadProfile.Max();
+
+            for (int i = 0; i < loadProfile.Count; i++ )
+            {
+                loadProfile[i] = (loadProfile[i] /max ); 
+            }
+
         }
       
 

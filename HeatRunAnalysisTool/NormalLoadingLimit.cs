@@ -7,16 +7,7 @@ using System.Threading.Tasks;
 namespace HeatRunAnalysisTool
 {
 
-    /*
-    * *************************************
-    * NormalLoadingLimit.cs
-    * Created by  Aaron Bautista
-    * Modified by Abner Joel Hernandez
-    * Date: 2/13/2016
-    * Version 0.2
-    * 
-    * ************************************
-    */
+
 
     class NormalLoadingLimit
     {
@@ -45,6 +36,7 @@ namespace HeatRunAnalysisTool
 
         private double threshold; //Stores the threshold value for the maximum
 
+        private int maxPerUnitIndex; // Stores the maximim perunit value possible for this loading limit
         private double maxPerUnit; // Stores the maximim perunit value possible for this loading limit
 
 
@@ -58,6 +50,8 @@ namespace HeatRunAnalysisTool
             this.threshold = threshold;
             this.t = t;
 
+            this.maxPerUnit = perUnitValues.Max();
+            this.maxPerUnitIndex = Array.IndexOf(perUnitValues, maxPerUnit);
 
             calculateKRMS();
 
@@ -224,6 +218,14 @@ namespace HeatRunAnalysisTool
         {
             return tauTO;
         }
+        public double[] getAmbientTempArr()
+        {
+            return this.xfrmr.getAmbientTempArr();
+        }
 
+        public double getMaxPerUnit()
+        {
+            return this.maxPerUnit;
+        }
     }
 }
